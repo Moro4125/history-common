@@ -1,7 +1,7 @@
 {
   "name": "moro/history-common",
   "description": "Package of common classes for feature 'entity history'.",
-  "version": "0.2.0",
+  "version": "0.1.1",
   "keywords": [
     "php",
     "dependency injection",
