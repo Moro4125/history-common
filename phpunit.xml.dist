@@ -1,0 +1,47 @@
+<!--
+  ~ This file is part of the package moro/history-common
+  ~
+  ~ @see https://github.com/Moro4125/history-common
+  ~ @license http://opensource.org/licenses/MIT
+  ~ @author Morozkin Andrey <andrey.dmitrievich@gmail.com>
+  -->
+
+<phpunit
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/7.0/phpunit.xsd"
+        bootstrap="tests/phpunit.bootstrap.php"
+        convertErrorsToExceptions="true"
+        convertNoticesToExceptions="true"
+        convertWarningsToExceptions="true"
+        verbose="true">
+    <testsuites>
+        <testsuite name="My Test Suite">
+            <file>tests/unit/HistoryFacadeTest.php</file>
+            <file>tests/unit/EntityFieldScalarTest.php</file>
+            <file>tests/unit/EntityFieldHashTest.php</file>
+            <file>tests/unit/EntityFieldListTest.php</file>
+            <file>tests/unit/EntityTypeTest.php</file>
+            <file>tests/unit/TypeLocatorTest.php</file>
+            <file>tests/unit/ChainStrategyTest.php</file>
+            <file>tests/unit/ChainComponentTest.php</file>
+            <file>tests/unit/ViewComponentTest.php</file>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">sources/</directory>
+            <exclude>
+                <file>sources/Accessory/Subject.php</file>
+                <file>sources/Tools/DiffMatchPatch.php</file>
+                <file>sources/Tools/DiffPatchObject.php</file>
+            </exclude>
+        </whitelist>
+    </filter>
+    <logging>
+        <log type="tap" target="build/report.tap"/>
+        <log type="junit" target="build/report.junit.xml"/>
+        <log type="coverage-html" target="build/coverage"/>
+        <log type="coverage-text" target="build/coverage.txt"/>
+        <log type="coverage-clover" target="build/logs/clover.xml"/>
+    </logging>
+</phpunit>

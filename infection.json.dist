@@ -1,0 +1,21 @@
+{
+  "source": {
+    "directories": [
+      "sources"
+    ],
+    "excludes": [
+      "HistoryFacade",
+      "HistoryOptions",
+      "DiffMatchPatch",
+      "DiffPatchObject"
+    ]
+  },
+  "timeout": 10,
+  "logs": {
+    "text": "tests\/_output\/infection-log.txt"
+  },
+  "phpUnit": {
+    "configDir": ".",
+    "customPath": "vendor\/phpunit\/phpunit\/phpunit"
+  }
+}
